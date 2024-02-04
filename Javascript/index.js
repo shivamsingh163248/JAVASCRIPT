@@ -1,5 +1,5 @@
 console.log("my name is shivam singh ");
-alert("what is you name ") ; 
+// alert("what is you name ") ; 
 
 // now creating the variable in the java script 
 // three type of the variable found in the java script let const and var 
