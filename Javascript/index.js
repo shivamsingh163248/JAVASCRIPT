@@ -14,3 +14,13 @@ let secondChildAge = 26 ;
 let sumOfChild = fistChileAge+secondChildAge ; 
 console.log(fistChileAge+secondChildAge) ; 
 console.log(sumOfChild) ;
+
+// now creating the varaible of the using the const and var 
+
+const number = 10 ; 
+// number  = 20 ;  hear we con't allowed again the modified the number 
+
+var namess = "shivam singh" ; 
+namess = "itisha singh " ;  // now we can see the that the variable are upgrade 
+console.log(namess);
+
