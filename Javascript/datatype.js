@@ -39,3 +39,14 @@ console.log(typeof frute);
  // now creating the long int 
  let logint = 4n ; 
  console.log(typeof logint) ; 
+
+ // some intreating facts about the java script 
+ console.log(Number.MAX_VALUE) ; 
+ console.log(Number.MIN_VALUE) ; 
+ console.log(Number.MAX_VALUE*10) ; 
+
+ let value1 = Infinity ; 
+
+ console.log(10/0) ; 
+ console.log(Infinity/0) ; 
+ console.log(123/Infinity) ; 
