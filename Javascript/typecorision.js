@@ -27,3 +27,8 @@ console.log(typeof m  ) ;
 console.log('5' -5) ; 
 // answer will be the 0 ; 
 
+// now checking the boolean 
+console.log(true+true) ; 
+console.log(true+false) ;  // hear the false treat as the 0 and true treat as the 1 
+
+
