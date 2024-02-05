@@ -55,5 +55,8 @@ console.log(Boolean("shivam"))
 console.log(Boolean(1)) ; 
 console.log(Boolean(0)) ; 
 
+// creating one fore example 
+console.log(Number("30.7")+20);
+
 
 
