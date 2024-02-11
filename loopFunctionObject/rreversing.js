@@ -1,7 +1,10 @@
-let shi = "shivam "  ; 
-
+let shi = "shivamsingh"  ; 
+const sp = shi.split("") ; 
+console.log(sp.length) ; 
 console.log(shi.substring(1)) ; 
 console.log(shi.charAt(1)); 
+console.log(shi.slice(4))
+
 
 
 function reverseString(str){
