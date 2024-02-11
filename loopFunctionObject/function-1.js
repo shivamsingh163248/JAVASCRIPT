@@ -8,7 +8,7 @@ function isValid(str){
     }
 
     // now creating the loop 
-    for (let i = 0; i < str.length(); i++) {
+    for (let i = 0; i < str.length; i++) {
       
         // check the all the place of  of string to validate the chreacture 
         if (!((str[i] >= 'a' && str[i]<='z') || (str[i] >= 'A' && str[i] <= 'Z' ) ||(  str[i] === '_' ) ||( str[i] === '$') )) {
