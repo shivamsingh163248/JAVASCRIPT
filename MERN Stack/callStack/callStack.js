@@ -16,5 +16,7 @@ let age = 20 ;
      console.log(`happy birthday ${username}`);
 
     
-     
+     if (age > 18){
+     happybirthday();
+     }
  }
