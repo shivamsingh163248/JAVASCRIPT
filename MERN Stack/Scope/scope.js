@@ -26,4 +26,5 @@ function brackup(){
 
 // calling the function
 brackup( ) ;
+var x =10 ;
 console.log(friendgf) ;
