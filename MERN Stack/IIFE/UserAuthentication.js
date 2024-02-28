@@ -27,5 +27,3 @@ function main(){
   return userAuth;
   }
 
-  const userAuth = main() ; 
-  console.log(userAuth) ; 

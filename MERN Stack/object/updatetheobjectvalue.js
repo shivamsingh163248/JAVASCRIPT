@@ -45,19 +45,52 @@ const obj = {user: "shivam",
 };
 
 
-console.log(arr.includes(obj));
 
-const inventory = [
-    { name: "apples", quantity: 2 },
-    { name: "bananas", quantity: 0 },
-    { name: "cherries", quantity: 5 },
+for (const i in  arr) {
+
+    // console.log(i.user === "shivam" && i.pas === "sdaddwe") ; 
+    
+    if( arr[i] == obj ){
+        return true ; 
+    }
+ 
+}
+
+
+console.log(arr.includes(obj,0));
+
+// const inventory = [
+//     { name: "apples", quantity: 2 },
+//     { name: "bananas", quantity: 0 },
+//     { name: "cherries", quantity: 5 },
+//   ];
+  
+//   function isCherries(fruit) {
+//     return fruit.name === "cherries";
+//   }
+  
+//   console.log(inventory.find(isCherries));
+
+
+const people = [
+    {id: 1, name: 'John'},
+    {id: 2, name: 'Adam'},
   ];
   
-  function isCherries(fruit) {
-    return fruit.name === "cherries";
+  const isFound = people.some(element => {
+    if (element.id === 1) {
+      return true;
+    }
+  
+    return false;
+  });
+  
+  console.log(isFound); // 👉️ true
+  
+  if (isFound) {
+    // object is contained in the array
   }
   
-  console.log(inventory.find(isCherries));
 
 
 
