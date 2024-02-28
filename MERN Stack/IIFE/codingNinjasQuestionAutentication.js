@@ -47,8 +47,7 @@ function main() {
         for (let i = 0; i < registeredUsers.length; i++) {
           if (
             registeredUsers[i].username === username &&
-            registeredUsers[i].password === password
-          ) {
+            registeredUsers[i].password === password) {
             return true;
           }
         }
