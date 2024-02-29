@@ -67,3 +67,8 @@ function numberManupulation(num , fun){
 
 }
 
+
+const checkResult = numberManupulation(arr , squar) ; 
+for (const i of checkResult) {
+    console.log(i) ; 
+}
