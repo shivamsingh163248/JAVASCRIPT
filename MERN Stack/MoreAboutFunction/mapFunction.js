@@ -14,16 +14,35 @@ const frusts = ["orange" , "graps" , "watermelon" , "apple" , "patato"] ;
     return currentarr+"ing" ; 
  })
  
- console.log(cheang) ; 
+
 
  // if an calling the map function and not returning any thing in the function 
  // then check the what will the return the function 
- const cheang = frusts.map(function(currentarr){
+//  const cheang = frusts.map(function(currentarr){
     
- })
- console.log(cheang) ; 
+//  })
+//  console.log(cheang) ; 
 
 
 
  //*************************************************************************************** */
+
+ const checkSecond = frusts.map(objectcreating) ; 
+
+
+ // creating the the function for the passing in the arr 
+
+ function objectcreating(currentvale , index){
+    return {[index] : currentvale.length} ; 
+ }
+ function objectcreating(currentvale , index){
+    return index *currentvale.length ; 
+ }
+
+
+ console.log(checkSecond) ;
+  
+
+
+ //now check the the call back function using in the map function 
  
