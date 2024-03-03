@@ -45,4 +45,29 @@ const frusts = ["orange" , "graps" , "watermelon" , "apple" , "patato"] ;
 
 
  //now check the the call back function using in the map function 
+
+ const  numTestWithoutReturn = num.map(function(current){
+    console.log(current) ; 
+ })   ; 
+
+ // now check the new array 
+ console.log(numTestWithoutReturn) ;  // the output of this the project  undifined 
  
+
+
+ // paassing the arraw function in the map function 
+ const myName = ["Oluwatobi", "Tobi", "Olu"];
+
+ function mergeName(item, ind, arr) {
+   return `${ind + 1}) ${this} ${item} Sofela is part of ${arr}.`;
+ }
+ 
+ const myFullName = myName.map(mergeName, "Mr.");
+ console.log(myFullName);
+ 
+ // The console.log invocation above will return:
+ [
+   "1) Mr. Oluwatobi Sofela is part of Oluwatobi,Tobi,Olu.",
+   "2) Mr. Tobi Sofela is part of Oluwatobi,Tobi,Olu.",
+   "3) Mr. Olu Sofela is part of Oluwatobi,Tobi,Olu.",
+ ];
