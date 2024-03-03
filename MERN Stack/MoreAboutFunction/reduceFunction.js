@@ -28,3 +28,12 @@
  });
 
  console.log(test) ; 
+
+
+ // one more test of the reducing function 
+
+ // creating the blank arr 
+ const newarr = []  ; 
+ // now testing the reducing function 
+const chekcWithBlnakArrys = newarr.reduce((accumulator , currentVlue) =>{ return accumulator ; } ,5)
+console.log(chekcWithBlnakArrys) ; 
