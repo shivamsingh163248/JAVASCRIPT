@@ -27,13 +27,13 @@ const frusts = ["orange" , "graps" , "watermelon" , "apple" , "patato"] ;
 
  //*************************************************************************************** */
 
- const checkSecond = frusts.map(objectcreating) ; 
+ const checkSecond = frusts.map(objectcreatin) ; 
 
 
  // creating the the function for the passing in the arr 
 
- function objectcreating(currentvale , index){
-    return {[index] : currentvale.length} ; 
+ function objectcreatin(currentvale , index){
+    return { [currentvale.length] : index} ; 
  }
  function objectcreating(currentvale , index){
     return index *currentvale.length ; 
