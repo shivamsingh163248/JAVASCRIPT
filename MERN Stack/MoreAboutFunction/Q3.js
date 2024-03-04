@@ -23,3 +23,16 @@ console.log(chek) ;
 
 
 console.log(contacts[0]["company"])  ; 
+
+const obj = {
+
+}
+
+//.................................... test experiment .............................
+ 
+
+if(obj["shi"] == undefined){
+    obj["shi"]=[];
+}
+
+console.log(obj) ; 
