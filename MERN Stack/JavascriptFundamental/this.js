@@ -40,4 +40,14 @@ check2.work = check.work ;
 
 // now again the invoking the function 
 console.log(check2.work()) ; 
+
 // this is the perfectly work 
+
+// now testing with the arrow function with the this key world 
+
+const arrofun = () =>{
+    console.log(this) ; 
+}
+
+// now invoking the arrow function 
+arrofun() ;  // again this is the parent call 
