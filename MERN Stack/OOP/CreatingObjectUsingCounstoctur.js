@@ -31,4 +31,4 @@ const movies2 = new Movie("SLR" , "SOUTH") ;
 movies1.getDetails() ; 
 movies2.getDetails() ; 
 
-// this is the working the perfectly of the counstroctur based creating object 
+// this is the working the perfectly of the coustoctur based creating object 
