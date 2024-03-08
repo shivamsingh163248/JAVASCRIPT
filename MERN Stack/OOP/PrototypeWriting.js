@@ -5,4 +5,4 @@ function Person(name) {
     const john = new Person("John");
     john.__proto__.age = 40;
     console. log(john.age);
-    console. log(Person. prototype. age);
+    console. log(Person.prototype.age);
