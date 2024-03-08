@@ -28,4 +28,4 @@ vehickals.prototype.getDetails = function(){console.log(`vehikal Design : ${this
 // now inheriting the property 
 
 vehikal.getDetails() ; 
-console.log(vehikal) ; 
+console.log(vehikal) ;  
