@@ -38,6 +38,8 @@ function studentCounstoctur(){
  const  stu = new studentCounstoctur() ; 
  console.log(stu.studentClass) ; 
  console.log(student) ; 
+ const newStudentObj = Object.create(student) ; 
+ console.log(newStudentObj) ; 
 
 
 
