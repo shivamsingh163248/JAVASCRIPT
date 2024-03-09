@@ -18,7 +18,7 @@
     
     //Add the assignResource methods through Object prototype
         Shipment.prototype.assignResources = function(...resourcearrys){
-            this.resources.push(resourcearrys) ;  
+            this.resources.push(...resourcearrys) ;  
         }
     
     //Create the object literal with tthe name TrackingSystem
