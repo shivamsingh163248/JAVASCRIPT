@@ -25,3 +25,16 @@ console.log(Details) ;
 let b1 ; 
 ({b:b1} = obj );  // this is the way of the writing to code 
 console.log(b1) ; 
+
+
+
+let obj1 = { name: "John", country: "India", age: 38 };
+let names;
+
+({ names } = obj1);
+
+let { country: c, age: a } = obj1;
+
+obj1.country = "Canada";
+
+console. log(names, c, a);
