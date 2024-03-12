@@ -15,7 +15,7 @@ class cat{
 class dog{
     username ; 
     constructor (username){
-      this.username ; 
+      this.username  = username; 
     }
 
     // creating the method that name is the 
@@ -30,21 +30,25 @@ class dog{
 // creating the counstoctur 
 function animal(animalname){
 
-    this.animalname = animalname ;
 
-    check = function(){
-        if(this.animalname == "dog"){
+    
+        if(animalname == "dog"){
             return new dog("dog") ; 
-        }else if(this.animalname == "cat"){
+        }else if(animalname == "cat"){
             return new cat("cat") ; 
         }else{
             return null ; 
         }
 
-    }
+    
  
 
 }
 
 
 // now calling the check 
+
+const check = animal("dog") ; 
+// now check the 
+
+check.spark() ; 
