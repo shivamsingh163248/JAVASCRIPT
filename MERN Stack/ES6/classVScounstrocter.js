@@ -12,3 +12,27 @@ function Student(username , userDetals ){
 
 
 // now learning the class how to actually implement class 
+
+// now the learning the class expression 
+const classnames  = class {
+    
+}
+
+
+// class Declaration 
+class StudentDetails {
+
+    username ; 
+    userDetails ; 
+    userAddress ; 
+
+    constructor(username , userAddress , userDetails){
+     
+        this.userAddress = userAddress ; 
+        this.userDetails = userDetails ; 
+        this.username = username ; 
+    }
+
+    // creating the function in the class 
+
+}
