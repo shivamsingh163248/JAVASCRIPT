@@ -34,5 +34,24 @@ class StudentDetails {
     }
 
     // creating the function in the class 
+    // when we are the creating the function not write the function name 
+   getDetails(){
+
+    console.log(`username : ${this.username} , userDetails : ${this.userDetails} , userAdress : ${this.userAddress}`) ; 
+       
+    }
 
 }
+
+// now creating the object of the student details 
+
+const check = new StudentDetails("shivam singh " , "nadiahr rajgarh" , "computer Science") ; 
+
+console.log(check) ; 
+check.getDetails() ; 
+
+// creating the object of 
+ const stu = new  Student("shivam" , "computer science") ; 
+ console.log(stu) ; 
+ stu.getDetails() ; 
+
