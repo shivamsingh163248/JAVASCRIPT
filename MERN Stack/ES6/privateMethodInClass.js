@@ -12,7 +12,7 @@ constructor(){
 // nowcreating the private function 
 #fetDetails = function(){
     console.log("my name is shivam singh ") ; 
-
+    console.log("check for the commit ") ; 
 }
 
 // creating one public method use the private metnod 
