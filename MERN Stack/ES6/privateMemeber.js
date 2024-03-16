@@ -15,7 +15,7 @@ class student{
         this.studentName = studentName ; 
         this.studentClass = studentClass ; 
         this.studentSubject = studentSubject ; 
-        this.#studentbranch = studentBranch ; 
+        this.studentbranch = studentBranch ; 
 
     }
 
