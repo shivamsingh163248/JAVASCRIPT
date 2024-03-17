@@ -9,19 +9,22 @@ function main() {
 
            constructor(title, artist , duration){
            this.title =    title ;
-        this.artist =    artist ;
-       this.duration = duration;
+          this.artist =    artist ;
+         this.duration = duration;
               
     }
         
         // creating the method 
  getTitle = function(){
+    return title ; 
      
  }
  getArtist = function(){
+    return artist ;
      
  } 
 getDuration = function(){
+    return duration;
     
 }
         
@@ -29,21 +32,26 @@ getDuration = function(){
   
     //Create a Class Song extending the Media with proper constructor ,properties and methods
         class Song extends Media{
-            PopSong ;
-             RockSong;
-            album;
+             album;
              genre; 
             
-            constructor(PopSong , RockSong){
+            constructor(title,artist , duration  ,album , genre){
+                super(title,artist , duration) ; 
+                this.PopSong = PopSong ; 
+                this.RockSong = RockSong ; 
+                this.album = album ;
+                this.genre = genre ;
                 
             }
             
             getAlbum = function(){
+                return album ;
                 
             }
- getGenre = function(){
+            getGenre = function(){
+              return genre ;
      
- }
+            }
         }
   
     //Create a class Podcast inherting from the MEdia
@@ -59,40 +67,50 @@ getDuration = function(){
         getHost = function(){
             
         } 
- getTopic = function(){
+       getTopic = function(){
      
- }
+       }
     }
   
     //Create class PopSong and PockSong using Song class
     
-    class PopSong{
+    class PopSong extends Song{
         danceability ;
         energy;
-         constructor( danceability , energy){
-            
+      
+        // creating counstocter with all the supre class variable 
+        constructor(title,artist , duration ,album , genre , danceability , energy){
+            super(title,artist , duration , PopSong , RockSong ,album , genre) ; 
+            this.danceability = danceability ; 
+            this.energy = energy ;
         }
         
          getDanceability = function(){
+            return danceability ;
              
          }
          getEnergy = function(){
+            return energy ;
              
          }
         
         
     }
-    class RockSong{
+    class RockSong extends Song{
        distortion ;
-     tempo;
-          constructor(   distortion  , tempo ){
-            
+       tempo;
+        // creating the counstorcter with all the super class variable
+        constructor(title,artist , duration ,album , genre , distortion , tempo){
+            super(title,artist , duration  ,album , genre) ; 
+            this.distortion = distortion ; 
+            this.tempo = tempo ;
         }
         
         getDistortion = function(){
-            
+            return distortion ;
         }
      getTempo = function(){
+        return tempo ;
          
      }
         
