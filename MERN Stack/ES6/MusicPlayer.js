@@ -16,15 +16,15 @@ function main() {
         
         // creating the method 
  getTitle = function(){
-    return title ; 
+    return this.title ; 
      
  }
  getArtist = function(){
-    return artist ;
+    return this.artist ;
      
  } 
 getDuration = function(){
-    return duration;
+    return this.duration;
     
 }
         
@@ -45,29 +45,33 @@ getDuration = function(){
             }
             
             getAlbum = function(){
-                return album ;
+                return this.album ;
                 
             }
             getGenre = function(){
-              return genre ;
+              return this.genre ;
      
             }
         }
   
     //Create a class Podcast inherting from the MEdia
     class Podcast extends Media {
-        NewsPodcast  ; 
-        ComedyPodcast  ; 
-        host  ;
+        
+         host  ;
         topic;
-        constructor(NewsPodcast  , ComedyPodcast  ){
-            
+        // creating the counstrocter with all the super class variable
+        constructor(title,artist , duration  , host , topic){
+            super(title,artist , duration  ) ; 
+            this.host = host ; 
+            this.topic = topic ;
         }
         
         getHost = function(){
+            return this.host ;
             
         } 
        getTopic = function(){
+        return this.topic ;
      
        }
     }
@@ -80,17 +84,17 @@ getDuration = function(){
       
         // creating counstocter with all the supre class variable 
         constructor(title,artist , duration ,album , genre , danceability , energy){
-            super(title,artist , duration , PopSong , RockSong ,album , genre) ; 
+            super(title,artist , duration  ,album , genre) ; 
             this.danceability = danceability ; 
             this.energy = energy ;
         }
         
          getDanceability = function(){
-            return danceability ;
+            return this.danceability ;
              
          }
          getEnergy = function(){
-            return energy ;
+            return this.energy ;
              
          }
         
@@ -107,10 +111,10 @@ getDuration = function(){
         }
         
         getDistortion = function(){
-            return distortion ;
+            return this.distortion ;
         }
      getTempo = function(){
-        return tempo ;
+        return this.tempo ;
          
      }
         
@@ -118,38 +122,45 @@ getDuration = function(){
     }
   
     //Create NewsPodcast and ComedyPodcast using the Podcast class.
-    class  NewsPodcast {
+    class  NewsPodcast extends Podcast{
         source ;
-       rating;
-             constructor(  source , rating ){
-            
+        rating;
+       // creating the cousntrocter with all the super class variable
+        constructor(title,artist , duration , host , topic , source){
+            super(title,artist , duration , host , topic) ; 
+            this.source = source ; 
         }
         // creating the getmethod 
          getSource = function(){
+            return this.source ;
              
          }
  getDuration = function(){
-     
+       return this.duration ;
  }
         
         
         
     }
     
-    class ComedyPodcast {
+    class ComedyPodcast  extends Podcast{
         
     comedian ;
- rating ;
-               constructor(    comedian , rating   ){
-                   
-                   
-            
+    rating ;
+        // creating the cousntrocter with all the super class variable
+        constructor(title,artist , duration   , host , topic , comedian , rating){
+            super(title,artist , duration   , host , topic) ; 
+            this.comedian = comedian ; 
+            this.rating = rating ;
         }
         
      getComedian = function(){
+        return this.comedian ;
+
          
      }
 getRating = function(){
+    return this.rating ;
     
 } 
         
@@ -237,3 +248,4 @@ getRating = function(){
     };
   }
   
+  main() ; 
