@@ -36,7 +36,7 @@ function main(){
     
     function Enemy(health,strength,agility,enemyType){
         this.enemyType = enemyType;
-         Character(health,strength,agility)
+         Character.call(this,health,strength,agility)
     }
     
     let warrior1 = new Warrior(100, 50, 30, "sword");
