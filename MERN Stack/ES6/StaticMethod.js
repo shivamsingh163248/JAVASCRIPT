@@ -25,3 +25,12 @@ typeDetailsMehtod = function(){
 }
 
 // now creating the 
+const checkObject  = new student("shivam") ; 
+console.log(checkObject) ; 
+checkObject.Details() ; 
+checkObject.typeDetailsMehtod() ; 
+
+// now again calling the 
+// checkObject.printDetails() ; 
+// static method of the directly call the with class name 
+student.printDetails() ; 
