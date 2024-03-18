@@ -1,83 +1,41 @@
-//Do not alter the starter code.
+function main() {
+    class Message {
+      static status = false;
+      static totalMessages = 0;
+      sender;
+         receiver;
+       messageContent;
 
-    //Create your Message Class here with all the properties and methods
-  class Message{
-      sender ; 
-      receiver ;
-       messageContent ;
-      static totalMessages  = 0; 
-      static  status = false ; 
-
-
-     constructor(sender,receiver,messageContent ){
-       this.sender = sender ;
-      this.receiver  = receiver;
-       this.messageContent  = messageContent; 
-}
-
-
-      static recordMessage(){
-          this.totalMessages =  this.totalMessages+1 ; 
-          
+      constructor(sender, receiver, messageContent) {
+        this.sender = sender;
+        this.receiver = receiver;
+        this.messageContent = messageContent; 
       }
-
-      
-      static changeStatus(){
-          
-          // changed the status if online ture then change the offline 
-          // if the offline then changed the online 
-          if(this.status == false){
-              this.status = true ; 
-              console.log("The status has been changed to online");
-             
-          }else{
-              this.status = false ; 
-               console.log("The status has been changed to offline");
-             
-          }
-          
+      static changeStatus() {
+        Message.status = !Message.status; //accessing static methods using className.variableName
+        console.log(
+          `The status has been changed to ${
+            Message.status ? "online" : "offline"
+          }`
+        );
+      }
+      static recordMessage() {
+        Message.totalMessages += 1;
       }
       sendMessage() {
-        Message.recordMessage() ; 
-          
-          console.log(`The message ${this.messageContent} has been sent from ${this.sender} to ${this.receiver}`)
-          
+        console.log(
+          `The message '${this.messageContent}' has been sent from '${this.sender}' to '${this.receiver}'`
+        );
+        Message.recordMessage(); //after logging call the method
       }
-      displayDetails(){
-          let value = "" ; 
-          console.log(`Sender: ${this.sender}`);
-          console.log(`Receiver: ${this.receiver}`);
-          console.log(`Message: ${this.messageContent}`);
-          
-          if(Message.status == true){
-              value = "Online" ; 
-          }else{
-              value = "offline" ;
-          }
-          
-          console.log(`Status: ${value}`);
-          console.log(`Total Messages: ${Message.totalMessages}`);
-          
-          
+      displayDetails() { //correct way to display details.
+        console.log(`Sender: ${this.sender}`);
+        console.log(`Receiver: ${this.receiver}`);
+        console.log(`Message: ${this.messageContent}`);
+        console.log(`Status: ${Message.status ? "online" : "offline"}`);
+        console.log(`Total Messages: ${Message.totalMessages}`);
       }
-
-
-      
-      
-      
-      
+    }
+    return Message;
   }
-
-  Message.changeStatus();
-const myMessage = new Message("John", "Jane", "Hello");
-myMessage.sendMessage();
-myMessage.displayDetails();
-    const myMessagee = new Message("John", "Jane", "Hello");
-myMessagee.sendMessage();
-myMessagee.displayDetails();
-
-
-
-   
-  
-  
+    
