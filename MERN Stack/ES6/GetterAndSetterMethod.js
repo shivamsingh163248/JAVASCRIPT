@@ -15,13 +15,20 @@ class Student{
     }
 
     // creating the function 
-    get userRollNo(){
+    get DetailsuserRollNo(){
         return this.userRollNo ; 
     }
 
     // now set the value of the userName 
-    set userRollNo(userRollNo){
+    set DetailsuserRollNo(userRollNo){
         this.userRollNo = userRollNo ; 
     }
 
 }
+
+// now checking main function 
+
+// creating the object of the main class 
+const obj = new Student("shivam singh " , "b.tech" , "333434") ; 
+
+console.log(obj.DetailsuserRollNo) ;  // not used the bracket in the in the get method 
