@@ -19,3 +19,6 @@ const NoramlString =  dob.toString() ;
 // now checking the both on the console 
 console.log(stringvalue) ; 
 console.log(NoramlString) ; 
+
+// now  change to slice 
+console.log(NoramlString.slice(11,20)) ; 
