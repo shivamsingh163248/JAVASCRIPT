@@ -32,3 +32,9 @@ class Student{
 const obj = new Student("shivam singh " , "b.tech" , "333434") ; 
 
 console.log(obj.DetailsuserRollNo) ;  // not used the bracket in the in the get method 
+
+// now i want to changed to the value using the set that means setter 
+obj.DetailsuserRollNo = "54544" ; 
+// now printing on the console the value 
+console.log(obj.userRollNo);
+console.log(obj.DetailsuserRollNo);
