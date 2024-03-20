@@ -15,5 +15,13 @@ class Student{
     }
 
     // creating the function 
+    get userRollNo(){
+        return this.userRollNo ; 
+    }
+
+    // now set the value of the userName 
+    set userRollNo(userRollNo){
+        this.userRollNo = userRollNo ; 
+    }
 
 }
