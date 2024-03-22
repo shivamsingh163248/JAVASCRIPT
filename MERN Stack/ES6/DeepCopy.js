@@ -20,3 +20,8 @@ const obj = JSON.stringify(details1) ;
 // now checking the the 
 console.log(obj) ; 
 
+// now creating the object 
+const newObject = JSON.parse(obj) ; 
+// now checking the object 
+console.log(newObject) ;  // now learning the jason convert to the object using the phrase 
+
