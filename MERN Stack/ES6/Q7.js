@@ -16,6 +16,7 @@ function main(){
         }
             
             // creatng the getter and setter method 
+            
         }
         
     
