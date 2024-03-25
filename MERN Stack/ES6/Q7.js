@@ -15,8 +15,28 @@ function main(){
              this.posts = [];
         }
             
-            // creatng the getter and setter method 
+            // creatng the getter and setter method  in js of name and email   and password
+            get Name(){
+                return this.name;
+            }
+            set Name(name){
+                this.name = name;
+            }
+            get Email(){
+                return this.email;
+            }
+            set Email(email){
+                this.email = email;
+            }
+            get Password(){
+                return this.password;
+            }
+            set Password(password){
+                this.password = password;
+            }
             
+                        
+
         }
         
     
