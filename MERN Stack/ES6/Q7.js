@@ -77,7 +77,7 @@ function main(){
 
 // -displayDetails: It should print the post'd details inheriting from the User class in key-value pair which includes the owner's name, title, content, date, and likeCount.
 
-
+// now we are the learning the details of the post class
         class Post extends User{
             title;
             content;
@@ -119,7 +119,7 @@ function main(){
                 console.log(`Likes: ${this.likeCount}`);
             }
         }
-        
+
         
     
     //Create your class "Post" here inheritting the User class with all the properties and methods as mentioned
