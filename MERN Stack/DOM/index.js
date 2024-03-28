@@ -1,3 +1,3 @@
-let value  = document.querySelector("#nav");
-console.log(typeof value) ; 
-console.log(value) ; 
+const value = document.getElementById('nav') ; 
+// creating the change the color 
+value.style.color = "red" ; 
