@@ -5,4 +5,7 @@ btn.className = 'creatingButton'  ;
 
 // this is the the append in the section and div try both to creating the button 
 const sectionvalue = document.getElementById('black') ; 
-sectionvalue.appendChild(btn) ; 
+const valuesetinDiv = document.querySelector('#black div') ; 
+
+// sectionvalue.appendChild(btn) ; 
+ valuesetinDiv.appendChild(btn) ; 
