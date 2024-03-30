@@ -7,11 +7,14 @@ div_1.innerHTML = 'this is the parent child '
 // now getting the node from the 
 
 const parent = document.getElementById('parent') ; 
-const child = document.getElementById('child') ; 
+const childElement = document.getElementById('child') ; 
 
 // just using the both and check the creating the child 
 
-parent.appendChild(div_1) ; 
+ parent.appendChild(div_1) ; 
 
 // again creating the next child in the child 
 
+
+// child.appendChild(parent) ; 
+div_1.appendChild(childElement) ; 
