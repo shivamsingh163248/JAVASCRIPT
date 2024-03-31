@@ -54,6 +54,7 @@ function addBlog(blog) {
     // Add event listeners to the buttons
     moveUpButton.addEventListener('click', () => {
       const previousSibling = newBox.previousElementSibling;
+      console.log(previousSibling);
       if (previousSibling) {
         blogList.insertBefore(newBox, previousSibling);
       }
