@@ -15,5 +15,28 @@ const div = document.getElementById('main') ;
 // now append child in the div 
 div.appendChild(para) ; 
 
+// creating the color of the event listener creating on the paragraph
+
+// creating the event on the click 
+// creating the heading of my name 
+const heading = document.createElement('h1') ; 
+// creating the id name 
+heading.innerHTML = 'Shivam singh ' ; 
+heading.className = 'heading-shivamsingh' ; 
+
+// now this heading is the append in main 
+div.appendChild(heading) ; 
+
+// creating the button in the  div also 
+// creating the button 
+const button = document.createElement('button') ; 
+button.textContent = 'remove shivam singh ' ; 
+// set the class name in the the button 
+button.className = 'button-name' ; 
+
+// append in the div 
+div.appendChild(button) ; 
+
+
 
 
