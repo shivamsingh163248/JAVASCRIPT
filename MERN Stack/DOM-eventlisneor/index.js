@@ -37,6 +37,28 @@ button.className = 'button-name' ;
 // append in the div 
 div.appendChild(button) ; 
 
+button.addEventListener('click',()=>{
+    heading.remove() ; 
+})
+
+// creating the event listener in the paragraph 
+para.addEventListener('mousedown' , ()=>{
+    para.style.backgroundColor ='yellow' ; 
+})
+para.addEventListener('mouseup' , ()=>{
+    para.style.backgroundColor ='green' ; 
+})
+
+
+
+//  creating the some event listener 
+document.body.addEventListener('keydown',(event) => {
+     console.log('keypressed shivam ') ; 
+     console.log(event.type) ; 
+     // creating the type of the event key 
+     console.log(event.key) ; 
+})
+
 
 
 
