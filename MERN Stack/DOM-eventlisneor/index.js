@@ -57,6 +57,7 @@ document.body.addEventListener('keydown',(event) => {
      console.log(event.type) ; 
      // creating the type of the event key 
      console.log(event.key) ; 
+     
 })
 
 
