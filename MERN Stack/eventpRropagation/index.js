@@ -2,7 +2,8 @@
 // and using the event listener on the heading 
 document
  .querySelector('h1')
- .addEventListener('click' , ()=>{
+ .addEventListener('click' , (event)=>{
+    event.stopPropagation() ; 
    console.log('heading 3 clicked') ; 
  }) ; 
 
@@ -11,6 +12,7 @@ document
  document 
   .getElementById('innerDiv') 
   .addEventListener('click' , ()=>{
+ // using for thr stop propgation 
     console.log('inner div are clciked') ; 
   })
 
@@ -22,4 +24,7 @@ document
     console.log('clicked on the outer div') ; 
  })
 
- // add event listoner on the body 
+ // add event listener on the body 
+ document.body.addEventListener('click', ()=>{
+    console.log("body was clciked") ; 
+ },true); /// destable the true 
