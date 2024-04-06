@@ -15,4 +15,11 @@ document
   })
 
   // also creating the event on the outer div 
-  
+document
+ .getElementsByTagName('div')[0]
+ .addEventListener('click',()=>{
+    // something the printing on the console 
+    console.log('clicked on the outer div') ; 
+ })
+
+ // add event listoner on the body 
