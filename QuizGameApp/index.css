@@ -1,6 +1,6 @@
 /* creating the style for the html */
 :root{
-    --orange :#dab23a ;  
+    --orange :#e6c155 ;  
     
 }
 
@@ -8,4 +8,21 @@ h1{
     color: #eb391a;
     margin-top: 50px;
     text-align: center;
+}
+
+#question{
+    background-color: var(--orange);
+    height: 50px;
+    width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+    box-sizing: border-box;
+    border: 2px solid orange;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+
+}
+#question:hover{
+    background-color: #e7b112 ;
 }
