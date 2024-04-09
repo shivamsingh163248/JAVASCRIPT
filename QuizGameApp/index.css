@@ -1,0 +1,11 @@
+/* creating the style for the html */
+:root{
+    --orange :#dab23a ;  
+    
+}
+
+h1{
+    color: #eb391a;
+    margin-top: 50px;
+    text-align: center;
+}
