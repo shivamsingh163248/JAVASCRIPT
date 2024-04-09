@@ -26,3 +26,29 @@ h1{
 #question:hover{
     background-color: #e7b112 ;
 }
+#option{
+    background-color: antiquewhite;
+    height: 350px;
+    margin-top: 50px;
+    display: block;
+    position: relative;
+    border: 2px solid #e6c155;
+}
+
+#options{
+    display: block;
+    height: 50px;
+    background-color: rgb(199, 137, 71);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    margin-top: 20px;
+    box-sizing: content-box;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#options:hover{
+    background-color: green;
+}
