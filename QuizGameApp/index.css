@@ -64,6 +64,34 @@ h1{
     border: 1px solid;
     text-align: center;
     border-radius: 50px;
+    display: none;
 
 
+}
+#privous ,#next{
+    /* Remove the empty ruleset */
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    background-color: #eb391a;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline;
+    
+   
+   
+   
+}
+#privous{
+    margin-left: 45%;
+}
+#privious-next-button{
+    
+    margin-top: 30px;
+   
+   height: 60px;
+   box-sizing: border-box;
+   border: 1px solid #e6c155;
+   
+   
 }

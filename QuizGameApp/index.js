@@ -49,5 +49,12 @@ const quesJSON = [
         "Which author wrote 'Mary Poppins'?",
     },
   ];
+
+  // now accessing all the dom object using the get element by id 
+  const question = document.getElementById('question');
+  const option = document.getElementById('option');
+  const score = document.getElementById('score');
+  
+
   
 
