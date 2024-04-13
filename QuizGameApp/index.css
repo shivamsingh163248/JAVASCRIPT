@@ -68,7 +68,7 @@ h1{
 
 
 }
-#privous ,#next{
+#privous ,#next, #submit{
     /* Remove the empty ruleset */
     height: 50px;
     width: 100px;
@@ -85,13 +85,16 @@ h1{
 #privous{
     margin-left: 45%;
 }
+#submit{
+    display: none;
+}
 #privious-next-button{
     
     margin-top: 30px;
    
    height: 60px;
    box-sizing: border-box;
-   border: 1px solid #e6c155;
+   /* border: 1px solid #e6c155; */
    
    
 }

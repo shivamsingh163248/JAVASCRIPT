@@ -54,7 +54,18 @@ const quesJSON = [
   const question = document.getElementById('question');
   const option = document.getElementById('option');
   const score = document.getElementById('score');
-  
+  const privous_Button = document.getElementById('privous') ; 
+  const next_Button = document.getElementById('next') ; 
+  const submit_button = document.getElementById('submit');
+
+
+  // now creating the variable of the score of the Question 
+  // and creating the total score 
+  // and creating the variable of the question number this is the update 
+
+
+  let 
+
 
   
 
