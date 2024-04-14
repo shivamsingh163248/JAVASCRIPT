@@ -67,15 +67,7 @@ const quesJSON = [
   let totalSore = 0 ; 
   let QuestionNumber = 0 ; 
 
-  
 
-  // creating the function of the random changed the arrays the position
-const arr = [1,2,3,4,5] ; 
-const arrs = shuffledOptions(arr) ; 
-// check the after the calling the arrays 
-arrs.forEach((value)=>{
-  console.log(value) ; 
-})
 
   function shuffledOptions(option){
 
@@ -84,8 +76,9 @@ arrs.forEach((value)=>{
     // console.log(lengthOption) ; 
     // using the meth random and the meth flower creating the random number between the range 
 
-    const randomNumber = Math.floor(Math.random*lengthOption)+1 ; 
-    const randomNumber1 = Math.floor(Math.random*lengthOption)+1 ; 
+    const randomNumber = Math.floor(Math.random()*lengthOption) ; 
+    const randomNumber1 = Math.floor(Math.random()*lengthOption) ; 
+    
 
     // now switching to each other because the address of the arr is the same 
     let temp = option[randomNumber] ; 
@@ -95,6 +88,10 @@ arrs.forEach((value)=>{
 
 
   }
+
+
+  // creating the function of the next Question 
+  // and the set the Question if it is the final Question then the ans the congratulation 
 
   
 
