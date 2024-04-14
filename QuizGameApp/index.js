@@ -70,8 +70,12 @@ const quesJSON = [
   
 
   // creating the function of the random changed the arrays the position
-const arr = [4,6,4,6,4,6,4] ; 
-shuffledOptions(arr) ; 
+const arr = [1,2,3,4,5] ; 
+const arrs = shuffledOptions(arr) ; 
+// check the after the calling the arrays 
+arrs.forEach((value)=>{
+  console.log(value) ; 
+})
 
   function shuffledOptions(option){
 
@@ -79,8 +83,15 @@ shuffledOptions(arr) ;
     const lengthOption = option.length; 
     // console.log(lengthOption) ; 
     // using the meth random and the meth flower creating the random number between the range 
-    
 
+    const randomNumber = Math.floor(Math.random*lengthOption)+1 ; 
+    const randomNumber1 = Math.floor(Math.random*lengthOption)+1 ; 
+
+    // now switching to each other because the address of the arr is the same 
+    let temp = option[randomNumber] ; 
+    option[randomNumber] = option[randomNumber1] ; 
+    option[randomNumber1] = temp ; 
+    return option ; 
 
 
   }
