@@ -64,7 +64,9 @@ const quesJSON = [
   // and creating the variable of the question number this is the update 
 
 
-  let 
+  let totalSore = 0 ; 
+  let QuestionNumber = 0 ; 
+  
 
 
   
