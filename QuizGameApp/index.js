@@ -66,8 +66,24 @@ const quesJSON = [
 
   let totalSore = 0 ; 
   let QuestionNumber = 0 ; 
+
   
 
+  // creating the function of the random changed the arrays the position
+const arr = [4,6,4,6,4,6,4] ; 
+shuffledOptions(arr) ; 
+
+  function shuffledOptions(option){
+
+    // fist the find the length of the option 
+    const lengthOption = option.length; 
+    // console.log(lengthOption) ; 
+    // using the meth random and the meth flower creating the random number between the range 
+    
+
+
+
+  }
 
   
 
