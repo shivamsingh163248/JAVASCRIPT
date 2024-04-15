@@ -67,6 +67,7 @@ const quesJSON = [
 
   let totalSore = 6 ; 
   let CurrentQuestion = 2 ; 
+  const JASON_Length = quesJSON.length ; 
 
 
 
@@ -95,7 +96,7 @@ const quesJSON = [
   // and the set the Question if it is the final Question then the ans the congratulation 
   // fist the find the jason length 
 
-  const JASON_Length = quesJSON.length ; 
+  
   // console.log(`chekc the lenght ${JASON_Length}`) ; 
 
 
@@ -128,5 +129,34 @@ function nextQuestion(){
 // calling the next question for the checking 
 // nextQuestion() ; 
 // console.log(CurrentQuestion) ; 
+
+
+
+// now getting the object
+// now implement the event listener of the button and creating the button 
+
+// creating the loop on the options 
+function showQuestion(){
+
+  // fist the getting the object 
+  const QuestionObject = quesJSON[CurrentQuestion] ; 
+  // now destructor of the object 
+const{currectAnswer,QuestionOptions,Question} = QuestionObject ; 
+
+
+     // after the destructor apply of the loop on the current Question 
+     QuestionOptions.forEach(element => {
+      
+       // creating the button with the id  options 
+   
+
+     });
+
+}
+
+
+
+
   
 
+ 
