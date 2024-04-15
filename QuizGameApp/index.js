@@ -57,6 +57,7 @@ const quesJSON = [
   const privous_Button = document.getElementById('privous') ; 
   const next_Button = document.getElementById('next') ; 
   const submit_button = document.getElementById('submit');
+  const Question_window = document.getElementById('Question-window')
 
 
   // now creating the variable of the score of the Question 
@@ -65,7 +66,7 @@ const quesJSON = [
 
 
   let totalSore = 0 ; 
-  let QuestionNumber = 0 ; 
+  let CurrentQuestion = 0 ; 
 
 
 
@@ -92,6 +93,24 @@ const quesJSON = [
 
   // creating the function of the next Question 
   // and the set the Question if it is the final Question then the ans the congratulation 
+  // fist the find the jason length 
+
+  const JASON_Length = quesJSON.length ; 
+  console.log(`chekc the lenght ${JASON_Length}`) ; 
+function nextQuestion(){
+   if (JASON_Length == CurrentQuestion+1) {
+    
+   // its means the this is the final Question 
+   // so creating the login of the final Question after the calling the last
+   option.style.display = "none" ; 
+
+   }else{
+    // increment the current Question 
+
+    CurrentQuestion++ ; 
+   }
+  
+}
 
   
 
