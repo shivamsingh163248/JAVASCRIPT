@@ -65,8 +65,8 @@ const quesJSON = [
   // and creating the variable of the question number this is the update 
 
 
-  let totalSore = 0 ; 
-  let CurrentQuestion = 0 ; 
+  let totalSore = 6 ; 
+  let CurrentQuestion = 2 ; 
 
 
 
@@ -96,13 +96,26 @@ const quesJSON = [
   // fist the find the jason length 
 
   const JASON_Length = quesJSON.length ; 
-  console.log(`chekc the lenght ${JASON_Length}`) ; 
+  // console.log(`chekc the lenght ${JASON_Length}`) ; 
+
+
 function nextQuestion(){
    if (JASON_Length == CurrentQuestion+1) {
     
    // its means the this is the final Question 
    // so creating the login of the final Question after the calling the last
    option.style.display = "none" ; 
+   // creating the div element 
+   const divElement = document.createElement('div') ; 
+   const headingElement = document.createElement('h1') ; 
+   divElement.id = 'final_result' ; 
+   // printing the total score 
+   headingElement.innerHTML = `total score ${totalSore}` ; 
+   
+   // now appending the all the child element 
+   divElement.appendChild(headingElement) ; 
+   Question_window.appendChild(divElement) ; 
+   
 
    }else{
     // increment the current Question 
@@ -112,5 +125,8 @@ function nextQuestion(){
   
 }
 
+// calling the next question for the checking 
+// nextQuestion() ; 
+// console.log(CurrentQuestion) ; 
   
 
