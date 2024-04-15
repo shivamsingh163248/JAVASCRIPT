@@ -51,24 +51,31 @@ const quesJSON = [
   ];
 
   // now accessing all the dom object using the get element by id 
-  const question = document.getElementById('question');
+  const questions = document.getElementById('question');
   const option = document.getElementById('option');
   const score = document.getElementById('score');
   const privous_Button = document.getElementById('privous') ; 
   const next_Button = document.getElementById('next') ; 
   const submit_button = document.getElementById('submit');
   const Question_window = document.getElementById('Question-window')
-
+  
 
   // now creating the variable of the score of the Question 
   // and creating the total score 
   // and creating the variable of the question number this is the update 
 
 
-  let totalSore = 6 ; 
-  let CurrentQuestion = 2 ; 
+  let totalSore = 0 ; 
+  let CurrentQuestion = 0 ; 
   const JASON_Length = quesJSON.length ; 
 
+  
+  // next_Button.addEventListener('click',()=>{
+  //   console.log(`current ${CurrentQuestion}`) ; 
+  //   nextQuestion() ; 
+  
+  // })
+  showQuestion() ; 
 
 
   function shuffledOptions(option){
@@ -101,10 +108,16 @@ const quesJSON = [
 
 
 function nextQuestion(){
+
+   
    if (JASON_Length == CurrentQuestion+1) {
     
    // its means the this is the final Question 
    // so creating the login of the final Question after the calling the last
+
+   questions.innerHTML = "final score" ; 
+
+
    option.style.display = "none" ; 
    // creating the div element 
    const divElement = document.createElement('div') ; 
@@ -120,37 +133,106 @@ function nextQuestion(){
 
    }else{
     // increment the current Question 
-
-    CurrentQuestion++ ; 
+      CurrentQuestion++ ; 
+      showQuestion() ; 
+      
    }
   
 }
 
-// calling the next question for the checking 
-// nextQuestion() ; 
-// console.log(CurrentQuestion) ; 
 
-
-
-// now getting the object
-// now implement the event listener of the button and creating the button 
-
-// creating the loop on the options 
 function showQuestion(){
+     
+  const QuestionObject = quesJSON[CurrentQuestion] ; 
 
   // fist the getting the object 
-  const QuestionObject = quesJSON[CurrentQuestion] ; 
+  
   // now destructor of the object 
-const{currectAnswer,QuestionOptions,Question} = QuestionObject ; 
+const { correctAnswer, options , question} = QuestionObject ; 
+questions.innerHTML = question ; 
 
+
+console.log(options.length) ; 
 
      // after the destructor apply of the loop on the current Question 
-     QuestionOptions.forEach(element => {
+     options.forEach(element => {
       
        // creating the button with the id  options 
+       const button = document.createElement('button') ; 
+       button.id = "options" ; 
+       button.textContent = element ; 
+
+       // now appending in the option 
+       option.appendChild(button) ; 
+
+
+
+
+
+       // add event list
+       button.addEventListener('click' , ()=>{
+          // now creating the condition if you are the choose the write ans 
+       // then color will update 
+      
+      nextQuestion() ; 
+      
+       
+       if (correctAnswer == element) {
+        
+        // then the calling the write ans and the score will increase 
+        rightAns() ; 
+        // ans the color will changed 
+       
+        button.setAttribute("style", "background-color:green;")
+       
+ 
+        }
+        if (correctAnswer != element) {
+        
+          // then the calling the write ans and the score will increase 
+          
+          // ans the color will changed 
+          button.setAttribute("style", "background-color:red;")
+   
+          }
+
+         
+ 
+        
+       });
+
+
+     
    
 
      });
+
+    
+
+}
+
+
+
+
+
+// creating the function of the right ans ans wrong ans 
+
+function rightAns(){
+  // if the write the ans then you have the add the 1 mark
+  // so score will increase 
+  totalSore++ ;   
+
+}
+
+
+// now creating the function of the wrong ans 
+function wrongAns(minusmarking){
+
+  // if you given the wrong ans then mius 
+  totalSore = totalSore-minusmarking ; 
+  // score will update 
+  // if you want to return something the you return 
+  return totalSore ; 
 
 }
 

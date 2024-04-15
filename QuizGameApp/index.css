@@ -51,7 +51,7 @@ h1{
     border: 2px solid rgb(245, 18, 18);
 }
 #options:hover{
-    background-color: green;
+    background-color: rgb(102, 114, 63);
     border: 2px solid rgb(35, 63, 4);
 }
 #score{
