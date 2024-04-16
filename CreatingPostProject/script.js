@@ -68,6 +68,8 @@ commentButton.addEventListener('click', ()=>{
         comments.push(x) ; 
         commentLength++ ; 
         likecomment() ; 
+        comment_comment.textContent = '' ; 
+        allComment() ; 
       }
 
    
@@ -100,7 +102,20 @@ likecomment() ;
 
 
 
-// creating the spend on the 
+// creating the comment creating the p element 
+
+function allComment(){
+
+
+    comments.forEach(value =>{
+        const p = document.createElement('p') ; 
+        p.textContent = value ; 
+        // append all in the comment 
+        comment_comment.appendChild(p) ; 
+    })
+}
+
+allComment() ; 
 
 
 
@@ -113,5 +128,7 @@ likecomment() ;
 
 
 
-div1.append(h3,img , likeButton ,inputComment , commentButton,footerDiv) ; 
+
+
+div1.append(h3,img , likeButton ,inputComment , commentButton,footerDiv,comment_comment) ; 
 posts.appendChild(div1) ; 
