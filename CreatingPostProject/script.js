@@ -51,7 +51,7 @@ commentButton.textContent = "Comment" ;
 const inputComment = document.createElement('input') ; 
 inputComment.type = 'text' ; 
 inputComment.id = 'comment' ; 
-
+inputComment.required = true; 
 
  
 
@@ -59,13 +59,18 @@ inputComment.id = 'comment' ;
 // creating the event listener 
 commentButton.addEventListener('click', ()=>{
 
-    document.getElementById("comment").required = true;
+    
 
     const x = document.getElementById("comment").value;
     // this value add in the arrys 
-    comments.push(x) ; 
-    commentLength++ ; 
-    likecomment() ; 
+    console.log(x) ; 
+      if (x !=='') {
+        comments.push(x) ; 
+        commentLength++ ; 
+        likecomment() ; 
+      }
+
+   
     
 })
 
