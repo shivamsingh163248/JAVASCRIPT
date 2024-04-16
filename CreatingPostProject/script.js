@@ -12,6 +12,10 @@ const{id,author,content,likes,comments,image} = post1 ;
 
 // creating the object of the taking input from the document form the 
 // html 
+let commentLength = comments.length ; 
+
+
+
 const posts = document.getElementById('posts') ; 
 
 // creating the div with the id post 
@@ -49,6 +53,49 @@ inputComment.type = 'text' ;
 inputComment.id = 'comment' ; 
 
 
+ 
+
+
+// creating the event listener 
+commentButton.addEventListener('click', ()=>{
+
+    document.getElementById("comment").required = true;
+
+    const x = document.getElementById("comment").value;
+    // this value add in the arrys 
+    comments.push(x) ; 
+    commentLength++ ; 
+    likecomment() ; 
+    
+})
+
+
+// creating the div element for the footer 
+const footerDiv = document.createElement('div') ;
+const comment_comment = document.createElement('div') ;
+
+// this div also apend in the post 
+// creating the class of the both div 
+footerDiv.className = "post-footer";
+comment_comment.className = "comments-container";
+
+// creating the p ofr the like the comment 
+
+// creating the function like comment 
+  const likeCommnetValue = document.createElement('span') ; 
+  footerDiv.appendChild(likeCommnetValue) ; 
+function likecomment(){
+    
+    likeCommnetValue.textContent = `Likes: ${post1.likes} Comments: ${commentLength}`;
+   
+}
+likecomment() ; 
+
+
+
+
+
+// creating the spend on the 
 
 
 
@@ -56,5 +103,10 @@ inputComment.id = 'comment' ;
 
 
 
-div1.append(h3,img , likeButton ,inputComment , commentButton) ; 
+
+
+
+
+
+div1.append(h3,img , likeButton ,inputComment , commentButton,footerDiv) ; 
 posts.appendChild(div1) ; 
