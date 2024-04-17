@@ -7,9 +7,19 @@ let postsData = [
   ];
 
 
+
+
+  
+for (const key in postsData) {
+   post1 = postsData[key]
+   renderPosts()
+  
+
+
+
   function renderPosts() {
     const postsContainer = document.getElementById('posts');
-    postsContainer.innerHTML = '';
+      postsContainer.innerHTML = '';
     
     
       const postElement = document.createElement('div');
@@ -81,6 +91,7 @@ let postsData = [
       });
     
       postsContainer.appendChild(postElement);
+      return postElement ; 
     }
     
     
@@ -97,4 +108,7 @@ let postsData = [
       post1.comments.push(comment);
       renderPosts();
     }
-    renderPosts();    
+
+
+   
+}
