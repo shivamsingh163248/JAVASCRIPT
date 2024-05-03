@@ -29,7 +29,7 @@ let postsData = [
       const likeButton = document.createElement('button');
       likeButton.textContent = `Like`;
       likeButton.classList.add('like-button');
-      likeButton.addEventListener('click', () => {
+      likeButton.addEventListener('click', () => { 
         if (!likedPosts.has(post.id)) {
             likePost(post.id);
             likedPosts.add(post.id);
@@ -39,8 +39,8 @@ let postsData = [
                 button.style.backgroundColor = 'red';
         
             }
-    }
-});
+       }
+       });
   
       const commentInput = document.createElement('input');
       commentInput.type = 'text';
