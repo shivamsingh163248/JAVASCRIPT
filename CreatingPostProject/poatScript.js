@@ -10,10 +10,21 @@ let postsData = [
   // creating the function of the  render post 
   function randers_post(){
     // accessing the the posts id 
-    const post = document.getElementById('posts') ; 
+    const posts = document.getElementById('posts') ; 
     post.innerHTML = '' ; 
 
-    // now creating the div of the post 
+
+// creating the for each loop fot the accessing all the deta 
+postsData.forEach((post) => {// now creating the div of the post 
+    const post = document.createElement('div') ; 
+    // creating and the using the class list and add function() for add
+    post.classList.add('post') ;
+ });
+
+
+    
+
+
 
 
 
