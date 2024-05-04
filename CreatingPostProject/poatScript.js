@@ -11,15 +11,35 @@ let postsData = [
   function randers_post(){
     // accessing the the posts id 
     const posts = document.getElementById('posts') ; 
-    post.innerHTML = '' ; 
+    posts.innerHTML = '' ; 
 
 
 // creating the for each loop fot the accessing all the deta 
-postsData.forEach((post) => {// now creating the div of the post 
-    const post = document.createElement('div') ; 
+postsData.forEach((post) => {
+    // now creating the div of the post 
+    const UserPost = document.createElement('div') ; 
     // creating and the using the class list and add function() for add
-    post.classList.add('post') ;
+    UserPost.classList.add('post') ;
+    
+    // creating the heading h3
+    const postHeading = document.createElement('h3') ; 
+    // creating the image of the post 
+    const postImage = document.createElement('img') ; 
+    postImage.src = post.image ; 
+
+   console.log(post) ; 
+
+
+   UserPost.appendChild(postHeading) ; 
+   UserPost.appendChild(postImage) ; 
+   posts.appendChild(UserPost) ; 
+
+
  });
+
+
+
+
 
 
     
@@ -29,3 +49,5 @@ postsData.forEach((post) => {// now creating the div of the post
 
 
   }
+
+  randers_post() ; 
