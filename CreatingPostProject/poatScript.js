@@ -46,7 +46,22 @@ postsData.forEach((post) => {
     const commentButton = document.createElement('button') ; 
     commentButton.textContent = 'comment' ; 
 
-    
+    // creating the post footer 
+    const postFooter = document.createElement('div') ; 
+    postFooter.classList.add('post-footer') ; 
+
+    postFooter.textContent = `Likes : ${post.likes}  Comments : ${post.comments.length}`
+
+    const commentContainer = document.createElement('div') ; 
+    commentContainer.classList.add('comment-container');
+    // creating the loop od the object and creating the element and append 
+    // every element of down 
+    post.comments.forEach((comments)=> {
+       const commentPara = document.createElement('p') ; 
+       commentPara.textContent = comments ; 
+       commentContainer.appendChild(commentPara) ; 
+    });
+
     
 
    console.log(post) ; 
@@ -57,7 +72,9 @@ postsData.forEach((post) => {
    UserPost.appendChild(postParagraph) ; 
    UserPost.appendChild(postLikeButton) ; 
    UserPost.appendChild(postCommentsInput) ; 
-   UserPost.appendChild(commentButton) ; 
+   UserPost.appendChild(commentButton) ;
+   UserPost.appendChild(postFooter) ; 
+   UserPost.appendChild(commentContainer) ;  
    posts.appendChild(UserPost) ; 
 
 
