@@ -5,6 +5,8 @@ let postsData = [
     { id: 4, author: 'Bob', content: 'Check out this photo!', likes: 20, comments: [], image: 'https://files.codingninjas.in/image1-28708.jpg' },
   ];
 
+  
+
 
   // now creating the post 
   // creating the function of the  render post 
@@ -16,6 +18,8 @@ let postsData = [
 
 // creating the for each loop fot the accessing all the deta 
 postsData.forEach((post) => {
+
+  
     // now creating the div of the post 
     const UserPost = document.createElement('div') ; 
     // creating and the using the class list and add function() for add
@@ -50,7 +54,8 @@ postsData.forEach((post) => {
     const postFooter = document.createElement('div') ; 
     postFooter.classList.add('post-footer') ; 
 
-    postFooter.textContent = `Likes : ${post.likes}  Comments : ${post.comments.length}`
+    postFooter.textContent = `Likes : ${post.likes}  Comments : ${post.comments.length}`;
+    postLike(post.id);
 
     const commentContainer = document.createElement('div') ; 
     commentContainer.classList.add('comment-container');
@@ -61,6 +66,15 @@ postsData.forEach((post) => {
        commentPara.textContent = comments ; 
        commentContainer.appendChild(commentPara) ; 
     });
+
+
+    // now creating the event listener of the comment post footer
+    postFooter.addEventListener('click' , ()=>{
+        UserPost.appendChild(commentContainer) ;  
+    })
+
+
+    
 
     
 
@@ -74,7 +88,7 @@ postsData.forEach((post) => {
    UserPost.appendChild(postCommentsInput) ; 
    UserPost.appendChild(commentButton) ;
    UserPost.appendChild(postFooter) ; 
-   UserPost.appendChild(commentContainer) ;  
+   
    posts.appendChild(UserPost) ; 
 
 
@@ -90,6 +104,22 @@ postsData.forEach((post) => {
 
 
 
+
+  }
+
+
+  // creating the function of the like button if the click buuton 
+  function postLike(postId){
+    
+    // now writing the function of the update the likes 
+    const post = postsData.find(post => post.id === postId);
+
+    // now creating the condition 
+    if (post) {
+        post.likes++ ; 
+        randers_post() ; 
+    }
+    console.log('this is the post'+post.id)
 
   }
 
