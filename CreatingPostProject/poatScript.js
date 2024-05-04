@@ -23,15 +23,41 @@ postsData.forEach((post) => {
     
     // creating the heading h3
     const postHeading = document.createElement('h3') ; 
+    postHeading.textContent = post.author ; 
     // creating the image of the post 
     const postImage = document.createElement('img') ; 
     postImage.src = post.image ; 
+    postImage.alt = 'post image'  ; 
+
+    // creating the element paragraph 
+    const postParagraph = document.createElement('p') ; 
+    postParagraph.textContent = post.content ; 
+
+
+    // creating the the button and input field 
+    const postLikeButton = document.createElement('button') ; 
+    postLikeButton.textContent = 'Like' ; 
+
+    // creating the input field with the placeholder 
+    const postCommentsInput = document.createElement('input') ; 
+    postCommentsInput.placeholder = 'write a comment ...' ; 
+
+    // now creating the button for the comment button 
+    const commentButton = document.createElement('button') ; 
+    commentButton.textContent = 'comment' ; 
+
+    
+    
 
    console.log(post) ; 
 
 
    UserPost.appendChild(postHeading) ; 
    UserPost.appendChild(postImage) ; 
+   UserPost.appendChild(postParagraph) ; 
+   UserPost.appendChild(postLikeButton) ; 
+   UserPost.appendChild(postCommentsInput) ; 
+   UserPost.appendChild(commentButton) ; 
    posts.appendChild(UserPost) ; 
 
 
