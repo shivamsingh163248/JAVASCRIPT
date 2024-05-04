@@ -5,7 +5,7 @@ let postsData = [
     { id: 4, author: 'Bob', content: 'Check out this photo!', likes: 20, comments: [], image: 'https://files.codingninjas.in/image1-28708.jpg' },
   ];
 
-  
+  const likepostset = new Set() ; 
 
 
   // now creating the post 
@@ -41,6 +41,24 @@ postsData.forEach((post) => {
     // creating the the button and input field 
     const postLikeButton = document.createElement('button') ; 
     postLikeButton.textContent = 'Like' ; 
+    postLikeButton.classList.add('like-button') ; 
+     
+    // creating the event listener
+    postLikeButton.addEventListener('click' , ()=>{
+        if (!likepostset.has(post.id)) {
+            postLike(post.id) ; 
+            likepostset.add(post.id) ; 
+           
+            postLikeButton.style.color = "red" ; 
+            postLikeButton.disabled = true ; 
+
+            for(let ind of likepostset){
+                const button = document.querySelectorAll('.like-button')[ind-1];
+                button.style.backgroundColor = 'red';
+        
+            }
+        }
+    })
 
     // creating the input field with the placeholder 
     const postCommentsInput = document.createElement('input') ; 
@@ -55,7 +73,8 @@ postsData.forEach((post) => {
     postFooter.classList.add('post-footer') ; 
 
     postFooter.textContent = `Likes : ${post.likes}  Comments : ${post.comments.length}`;
-    postLike(post.id);
+   //  postLike(post.id);
+
 
     const commentContainer = document.createElement('div') ; 
     commentContainer.classList.add('comment-container');
