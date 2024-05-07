@@ -63,10 +63,17 @@ postsData.forEach((post) => {
     // creating the input field with the placeholder 
     const postCommentsInput = document.createElement('input') ; 
     postCommentsInput.placeholder = 'write a comment ...' ; 
+    postCommentsInput.type = 'text' ; 
+
+   
+
 
     // now creating the button for the comment button 
     const commentButton = document.createElement('button') ; 
-    commentButton.textContent = 'comment' ; 
+    commentButton.textContent = 'comment' ;
+    
+    // creating the event liston of the button 
+    
 
     // creating the post footer 
     const postFooter = document.createElement('div') ; 
