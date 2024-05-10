@@ -74,7 +74,7 @@ postsData.forEach((post) => {
     
     // creating the event liston of the button 
     // creating the event listener of the button 
-    commentButton.addEventListener('click'  , commentFun());
+   
 
     // creating the post footer 
     const postFooter = document.createElement('div') ; 
