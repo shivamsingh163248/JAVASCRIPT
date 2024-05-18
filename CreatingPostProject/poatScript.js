@@ -150,4 +150,12 @@ postsData.forEach((post) => {
 
   }
 
+  // creating the function of the add comment for the adding the comment in the jason file 
+  // creaing the function to add comment 
+  function addComment(){
+
+    // WRITE THE COMMENT function 
+
+  }
+
   randers_post() ; 
