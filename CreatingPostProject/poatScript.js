@@ -152,9 +152,14 @@ postsData.forEach((post) => {
 
   // creating the function of the add comment for the adding the comment in the jason file 
   // creaing the function to add comment 
-  function addComment(){
+  function addComment(postId , comment ){
 
-    // WRITE THE COMMENT function 
+   const post = postsData.find(post => post.id === postId ) ; 
+   // creating the condition when we get the post object 
+   if (post) {
+    post.comments.push(comment) ; 
+    randers_post() ; 
+   }
 
   }
 
