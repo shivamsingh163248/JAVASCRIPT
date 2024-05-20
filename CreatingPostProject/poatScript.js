@@ -158,6 +158,7 @@ postsData.forEach((post) => {
    // creating the condition when we get the post object 
    if (post) {
     post.comments.push(comment) ; 
+    // hear is the calling the raider post and apply them 
     randers_post() ; 
    }
 
