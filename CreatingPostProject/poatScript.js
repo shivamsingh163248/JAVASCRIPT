@@ -74,6 +74,12 @@ postsData.forEach((post) => {
     
     // creating the event liston of the button 
     // creating the event listener of the button 
+    commentButton.addEventListener('click' , ()=>{
+        // calling the add comment function 
+        addComment(post.id , postCommentsInput.value) ; 
+        // now set the post comment vaLue is p
+        postCommentsInput.value = '' ; 
+    })
    
 
     // creating the post footer 
