@@ -170,4 +170,14 @@ postsData.forEach((post) => {
 
   }
 
+  // creating the element to post to add data in the jason 
+  function createPost(){
+    
+    // fist we are the create the element 
+    // creating the division of class side bar 
+    const sidebar = document.createElement('div') ; 
+    // creating the class of the slide bar 
+    sidebar.classList.add = "sidebar" ; 
+  }
+
   randers_post() ; 
