@@ -1,24 +1,37 @@
-body{
-    margin: 0px;
-}
-
+* {
+    margin: 0;
+    padding: 0;
+  }
 #body-header{
 
     height: 60vh;
-    background-image: url(image/shivam-background.gif);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-image: url(image/back-cover.jpg);
+   background-position: center;
+   background-attachment: fixed;
+   background-size: cover;
+    
+   
 }
 #navig{
     list-style: none;
+    text-align: center;
     
 }
 #navig li{
     display: inline-block;
+    margin-left: 20px;
+    margin-top: 20px;
+    
+   
+    
    
 }
 #navig li a{
     text-decoration: none; 
+    color: rgb(255, 255, 255);
+   font-size: 30px;
+   font-style: normal;
+   text-transform: capitalize;
+   
+   
 }
