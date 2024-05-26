@@ -1,0 +1,13 @@
+body{
+    margin: 0px;
+}
+
+#body-header{
+
+    height: 60vh;
+    background-image: url(image/shivam-background.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
