@@ -11,3 +11,14 @@ body{
     background-repeat: no-repeat;
     background-attachment: scroll;
 }
+#navig{
+    list-style: none;
+    
+}
+#navig li{
+    display: inline-block;
+   
+}
+#navig li a{
+    text-decoration: none; 
+}
