@@ -178,6 +178,13 @@ postsData.forEach((post) => {
     const sidebar = document.createElement('div') ; 
     // creating the class of the slide bar 
     sidebar.classList.add = "sidebar" ; 
+    // creating the h3 element 
+    const h3 = document.createElement('h3') ; 
+    // in this contain the creating the new post 
+    h3.textContent = "Creating the new post" ; 
+
+    // now creating the form for the taking the input 
+    
   }
 
   randers_post() ; 
