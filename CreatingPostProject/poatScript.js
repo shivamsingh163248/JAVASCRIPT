@@ -183,8 +183,17 @@ postsData.forEach((post) => {
     // in this contain the creating the new post 
     h3.textContent = "Creating the new post" ; 
 
-    // now creating the form for the taking the input 
-    
+    // now creating the form for the taking the input
+    const postforms  = document.createElement('form') ; 
+    postforms.id = "postForm" ; 
+    // creating the input and append in the form all the input 
+    const inputPostCaption = document.createElement('input') ; 
+    // creating the type and the place holder 
+    inputPostCaption.type = "text" ; 
+    inputPostCaption.placeholder = "writing the your application caption " ; 
+    inputPostCaption.id = "postInput" ; 
+     
+
   }
 
   randers_post() ; 
