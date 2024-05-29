@@ -26,7 +26,15 @@ button.addEventListener('click' , ()=>{
     container.appendChild(sen) ; 
 
      // creating the set time out function 
-     // set time 
+     // set time  have the two parameter 
+     setTimeout(()=>{
+         sen.innerHTML = '' ; 
+     } ,2000)
+
+     // creating the function of the set time interval 
+     setInterval(()=>{
+        sen.innerHTML = "this is the used the setinterval function " ; 
+     } , 2000) ; 
 
 
 
