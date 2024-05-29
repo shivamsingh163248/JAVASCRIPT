@@ -192,7 +192,10 @@ postsData.forEach((post) => {
     inputPostCaption.type = "text" ; 
     inputPostCaption.placeholder = "writing the your application caption " ; 
     inputPostCaption.id = "postInput" ; 
-     
+    
+    
+    // again creating the second input that is the file 
+    const inputFile = document.createElement
 
   }
 
