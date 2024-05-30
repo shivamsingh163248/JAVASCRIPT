@@ -45,6 +45,14 @@ function emogigame() {
    const button = document.createElement('button') ; 
    const input =  document.createElement('input') ; 
 
+   button.textContent = "next" ; 
+   input.type = 'text' ; 
+   input.placeholder = "enter the your gassing " ; 
+   input.id = "text_input" ; 
+
+   header.appendChild(input) ; 
+   header.appendChild(button) ; 
+
 
 
     // now append all the creating element as the child 
@@ -53,8 +61,8 @@ function emogigame() {
     score.id =  'score' ; 
     
 
-    container.appendChild(header);
     container.appendChild(emoji);
+    container.appendChild(header);
     container.appendChild(score);
 
     display(header , emoji , score) ; 
@@ -75,6 +83,16 @@ function display(header , emoji , score ){
  
     emoji.innerHTML  = EmojiDetails[EmojiIndex].Emoji
     score.innerHTML = `${totalscore}` ; 
+
+
+}
+
+// creating the next function and taken the value 
+
+function next(){
+
+  // getting the value of the user using the form input 
+  
 
 
 }
