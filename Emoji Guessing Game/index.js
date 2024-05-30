@@ -6,19 +6,19 @@ const EmojiDetails = [
         Emoji: '😎'
     },
     {
-        Description: 'smile face with the sunglass',
+        Description: 'love',
         Emoji: '😍'
     },
     {
-        Description: 'smile face with the sunglass',
+        Description: 'sad',
         Emoji: '😔'
     },
     {
-        Description: 'smile face with the sunglass',
+        Description: 'sleep',
         Emoji: '🥱'
     },
     {
-        Description: 'smile face with the sunglass',
+        Description: 'kiss',
         Emoji: '😘'
     }
 
@@ -66,7 +66,10 @@ function emogigame() {
     container.appendChild(score);
 
     display(header , emoji , score) ; 
-
+    // creating the add event liston function 
+    button.addEventListener("click" , ()=>{
+        next(header , emoji , score) ; 
+    })
 }
 
 
@@ -89,10 +92,36 @@ function display(header , emoji , score ){
 
 // creating the next function and taken the value 
 
-function next(){
+function next(header , emoji , score){
 
-  // getting the value of the user using the form input 
+  // getting the value of the user using the form input
+  const input =  document.getElementById('text_input') ; 
   
+  // creating the condition 
+   const description = EmojiDetails[EmojiIndex].Description ; 
+
+   // creating the if condition 
+   console.log(input.value) ; 
+   if (input.value == description) {
+      
+   // score would be increase 
+   totalscore++ ; 
+   EmojiIndex++ ; 
+
+
+
+
+   }else{
+    EmojiIndex++
+   }
+
+   if (EmojiIndex == 4) {
+    EmojiIndex = 0 ; 
+   }
+
+   // calling for the display 
+   display(header , emoji , score) ; 
+
 
 
 }
