@@ -32,9 +32,13 @@ button.addEventListener('click' , ()=>{
      } ,2000)
 
      // creating the function of the set time interval 
-     setInterval(()=>{
+      const interval  = setInterval(()=>{
         sen.innerHTML = "this is the used the setinterval function " ; 
      } , 2000) ; 
+     
+     console.log(typeof interval) ; 
+
+     clearInterval(interval) ; 
 
 
 
