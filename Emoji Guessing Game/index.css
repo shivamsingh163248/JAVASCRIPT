@@ -1,5 +1,24 @@
 *{
     margin-left: 0px;
     margin-top: 0px;
+    background-color: antiquewhite;
+}
+#container{
+    background-color: burlywood;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 50px;
+    height: 90vh ; 
+    border: 2px red solid;
+    color: black;
+}
+
+#header{
+    color: brown;
+    font-size: 20px;
+
+}
+#score{
+    font-size: 30px;
 }
 
