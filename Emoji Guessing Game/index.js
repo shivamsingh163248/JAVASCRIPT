@@ -49,8 +49,23 @@ function emogigame() {
 
 }
 
-// creating the function for the next
+
+
+// creating the variable 
+let EmojiIndex = 0 ; 
+let score  = 0 ; 
+
+
 
 // creating the function display
+
+function display(){
+    
+}
+
+
+
+
+// creating the function for the next
 
 // creating the function 
