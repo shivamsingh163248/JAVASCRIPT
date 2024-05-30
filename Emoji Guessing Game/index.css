@@ -11,14 +11,22 @@
     height: 90vh ; 
     border: 2px red solid;
     color: black;
+    text-align: center;
 }
 
 #header{
     color: brown;
-    font-size: 20px;
+    font-size: 50px;
+    text-align: center;
+    background-color: inherit;
 
 }
 #score{
-    font-size: 30px;
+    font-size: 50px;
+    text-align: center;
+}
+#emoji{
+    font-size: 50px;
+    text-align: center;
 }
 
