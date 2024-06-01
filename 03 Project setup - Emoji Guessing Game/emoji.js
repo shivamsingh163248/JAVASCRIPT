@@ -12,13 +12,15 @@ const emojiDetails = [
   // creating the time field 
   // creating the second and timer variable 
   let second = 30 ; 
-  let timer ; 
+  let Countdown ; 
 
 
   //
   const guessInput = document.getElementById("guess-input");
   const resultElement = document.getElementById("result");
   const scoreElement = document.getElementById("score");
+    // fetching the timer id using the dom manipulation 
+    const timerElement  = document.getElementById('timer') ; 
 
   function displayEmoji() {
     const descriptionElement = document.getElementById("description");
@@ -45,12 +47,16 @@ const emojiDetails = [
   function nextEmoji() {
     currentEmojiIndex++;
 
+    setTimeout(()=>{ timerElement.textContent = '' ; })
+
     if (currentEmojiIndex === emojiDetails.length) {
       currentEmojiIndex = 0;
       score=0;
     }
 
     displayEmoji();
+   
+   
   }
 
   document
@@ -63,7 +69,36 @@ const emojiDetails = [
 
   document.addEventListener("DOMContentLoaded", () => {
     displayEmoji();
+    timer() ; 
   });
 
-  // fetching the timer id using the dom manipulation 
-  const timerDom = document.getElementById('timer') ; 
+
+
+  // creating the function of the time
+  function timer(){
+     
+     // creating the function using the time interval 
+   Countdown = setInterval(()=>{
+    second--
+    timerElement.textContent = `Timer  -${second}s Remaining ` ; 
+
+    // creating the conation  
+    if (second <= 0 ) {
+      // calling the function that are the closing 
+      Timeouts() ; 
+    }
+   },1000) ; 
+
+
+  }
+
+  // now closing the setinterval 
+  function Timeouts(){
+    clearInterval(Countdown) ; 
+
+    // creating the input disable
+    // set the time value is the blank 
+    timerElement.textContent = '' ; 
+  }
+
+
