@@ -9,7 +9,10 @@ const emojiDetails = [
 
   let currentEmojiIndex = 0;
   let score = 0;
-  //
+  // creating the time field 
+  // creating the second and timer variable 
+  let second = 30 ; 
+  let timer ; 
 
 
   //
@@ -61,3 +64,6 @@ const emojiDetails = [
   document.addEventListener("DOMContentLoaded", () => {
     displayEmoji();
   });
+
+  // fetching the timer id using the dom manipulation 
+  const timerDom = document.getElementById('timer') ; 
