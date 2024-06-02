@@ -13,7 +13,7 @@ const speedResult = document.getElementById('speed');
 const accuracy = document.getElementById('accuracy');
 
 // button for the retry-button means function are the again call and the using 
-const retry = document.createElement('retry-btn');
+const retry = document.getElementById("retry-btn");
 
 
 
@@ -30,48 +30,38 @@ let countsDownTimer;
 
 
 
-startTest.addEventListener('click', () => {
 
-    // now the input field  become the enable 
-    inputsentence.disabled = false;
-    // and the showing the sentence 
-    sentence.textContent = sentences;
-    // creating the timer function 
-    CountDownTimers();
-    // desable the start button 
-    startTest.disabled = true ; 
-
-
-}) ;
 
 
 
 // now creating the function display game and the game are the started 
 
-// function gameStart() {
-
-//     // creating the event listener on the start button 
-//     startTest.addEventListener('click', () => {
 
 
+    // creating the event listener on the start button 
+    startTest.addEventListener('click', () => {
+
+
+            // now the input field  become the enable 
+            inputsentence.disabled = false;
+            // and the showing the sentence 
+            sentence.textContent = sentences;
+            // creating the timer function 
+            CountDownTimers();
+            // desable the start button 
+            startTest.disabled = true ; 
+            inputsentence.value = ' ' ; 
         
-//         // now the input field  become the enable 
-//         inputsentence.disabled = false;
-//         // and the showing the sentence 
-//         sentence.textContent = sentences;
-//         // creating the timer function 
-
-//         // Now Disable the  start function 
-
-//         CountDownTimers();
+        
+       
 
 
-//     });
+    });
 
 
 
 
-// }
+
 
 
 
@@ -109,14 +99,30 @@ function CountDownTimers() {
 function endgameDisplayResult() {
 
     // creating the event listener on the retry button 
-   // writing the algorithm  for the checking the typing speed 
-  typingResult.style.display = "block" ; 
+   // writing the algorithm  for the checking the typing speed
+   
+  
+  typingResult.style.display = "block" ;
+
+
+  // now creating the algo 
+  
+
+
+
 
   // creating the event listener on the on the re-try button 
   retry.addEventListener('click' , ()=>{
-    // enable the start button 
+
+   // enable the start button 
+  
     startTest.disabled = false ; 
-  })
+    inputsentence.disabled = true ;
+  
+    typingResult.style.display = "none" ;
+    second = 30 ; 
+   
+  });
 
 }
 
@@ -129,4 +135,4 @@ function closeTimer(){
 
 
 }
-gameStart(); 
+ gameStart(); 
