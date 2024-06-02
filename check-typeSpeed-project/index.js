@@ -50,7 +50,7 @@ let countsDownTimer;
             CountDownTimers();
             // desable the start button 
             startTest.disabled = true ; 
-            inputsentence.value = ' ' ; 
+            
         
         
        
@@ -100,13 +100,43 @@ function endgameDisplayResult() {
 
     // creating the event listener on the retry button 
    // writing the algorithm  for the checking the typing speed
+
+   let totalRight = 0 ; 
    
+   console.log(inputsentence.value) ; 
+
+   let totallength = inputsentence.value  ; 
+   // console.log(totallength.length) ; 
+   
+   for (let i = 0; i < sentences.length; i++) {
+   
+   if (totallength.charAt(i) == sentences.charAt(i)) {
+      totalRight++ ; 
+   }
+//     console.log(totallength.charAt(i)) ;  
+   }
+
+   const speeds  = (totalRight/30)*60 ; 
+   console.log(speeds) ; 
+
+
+   // creating the next algorithm 
+   const accuracys = (totalRight/sentences.length)*100 ; 
+
+   speedResult.textContent = speeds ; 
+   accuracy.textContent = accuracys ; 
+
   
+
+   
+
+
+
   typingResult.style.display = "block" ;
 
 
   // now creating the algo 
-  
+
 
 
 
@@ -117,6 +147,7 @@ function endgameDisplayResult() {
    // enable the start button 
   
     startTest.disabled = false ; 
+    inputsentence.value = ' ' ; 
     inputsentence.disabled = true ;
   
     typingResult.style.display = "none" ;
