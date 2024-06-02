@@ -124,7 +124,7 @@ function endgameDisplayResult() {
    const accuracys = (totalRight/sentences.length)*100 ; 
 
    speedResult.textContent = speeds ; 
-   accuracy.textContent = accuracys ; 
+   accuracy.textContent = accuracys.toFixed(2) ; 
 
   
 
