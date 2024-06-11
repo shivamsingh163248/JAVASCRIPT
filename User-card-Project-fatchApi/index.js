@@ -36,6 +36,16 @@
   }
 
 
+  // now creating the function for the creating the html 
+
+  function userData(){
+    // this function use to creating the element and using the 
+    // jason to display the picture 
+    
+
+  }
+
+
   
 
   
