@@ -17,6 +17,9 @@
   const value =  request.responseText ; 
   console.log(value) ; 
   const myArr = JSON.parse(value) ; 
+
+  userData(myArr) ; 
+
   console.log(myArr) ; 
   console.log(myArr.length) ; 
  
@@ -38,10 +41,27 @@
 
   // now creating the function for the creating the html 
 
-  function userData(){
+  function userData(myArr){
     // this function use to creating the element and using the 
     // jason to display the picture 
-    
+
+    // fist find the length 
+      const container = document.createElement('div') ; 
+
+
+        for (const key in myArr) {
+           
+            const id = document.createElement('div')
+            const name = document.createElement('div') ; 
+            const username = document.createElement('div') ; 
+            const email = document.createElement('div') ; 
+        }
+
+     
+
+
+
+
 
   }
 
