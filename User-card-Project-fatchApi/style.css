@@ -16,10 +16,10 @@
     margin-right: 20%;
     border: 2px solid red;
     border-radius: 5px;
-     height: 70vh;
+     height: 300px;
 
 }
-#child-container-id{
+#userId{
   
     background-color: rgb(212, 199, 182);
     font-size: 30px;
@@ -29,34 +29,39 @@
     
 
 }
-#child-container-username{
+#username{
     background-color: rgb(212, 199, 182);
     margin-top: 10px;
     font-size: 25px;
 
 }
-#child-container-name{
+#name{
     background-color: rgb(212, 199, 182);
     margin-top: 10px;
     font-size: 20px;
 
 }
-#child-container-email{
+#email{
     background-color: rgb(212, 199, 182);
     margin-top: 10px;
     font-size: 20px;
 
 
 }
-#child-container-phoneNo{
+#phoneNo{
     background-color: rgb(212, 199, 182);
     margin-top: 10px;
     font-size: 20px;
 
 }
-#child-container-website{
+#website{
     background-color: rgb(212, 199, 182);
     margin-top: 10px;
     font-size: 20px;
 
+}
+#address{
+    background-color: rgb(212, 199, 182);
+    margin-top: 10px;
+    font-size: 20px;
 }
