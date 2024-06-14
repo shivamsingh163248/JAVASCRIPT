@@ -14,4 +14,8 @@ request.addEventListener('load' , ()=>{
      // these are the change the stringify 
      console.log(JSON.parse(request.responseText)) ; 
 
+     // now i want the  get the request in the xml formate 
+     // request.responseXML ; 
+     console.log() ; 
+
 })
