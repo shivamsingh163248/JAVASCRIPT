@@ -23,3 +23,5 @@ console.log(promish2) ;
 
 Promise.all([promise1 , promish2 ]).then((resp)=>{console.log(resp)}) ;  
 console.log("check the full fill or not ") ; 
+
+setTimeout()
