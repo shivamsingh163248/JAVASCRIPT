@@ -58,6 +58,40 @@ function fetchData(id){
 }
 
 function userDisplay(response){
+
+     const userDataDisplay = document.getElementById('userDataDisplay') ; 
+    // creating the div 
+    const userDiv = document.createElement('div') ; 
+    // creating the id 
+    userDiv.id = 'userDiv' ; 
+
+    // creating the element h1 for the name 
+    // creating the username and email address 
+    // creating the address 
+    const name = document.createElement('h1') ; 
+    const email = document.createElement('h3') ;
+    const username = document.createElement('h3') ; 
+    const address = document.createElement('p') ; 
+
+
+    // all the element in the 
+    name.textContent = response.name ; 
+    username.textContent = response.username ;
+    email.textContent = response.email ; 
+
+    // now append all the 
+    userDiv.appendChild(name) ; 
+    userDiv.appendChild(email) ; 
+    userDiv.appendChild(username) ; 
+ 
+    userDataDisplay.appendChild(userDiv) ; 
+
+
+
+    
+    
+
+
     
 }
 
