@@ -44,11 +44,20 @@ displayUser() ;
 
 // creating the function for the fetching the data form the api
 function fetchData(id){
-
  // id taking form the user 
  //and the finding the data of the user 
-
  // creating the fetch and you also using the async wait 
- 
+ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+ .then((response)=> response.json())
+ .then((response)=>{
+
+    // calling the the display user 
+    userDisplay(response) ; 
+ }) 
 
 }
+
+function userDisplay(response){
+    
+}
+
