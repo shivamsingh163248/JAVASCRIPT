@@ -14,8 +14,23 @@ function getPokemon(){
         // now calling the next url 
         return fetch(response.results[x].url) ; 
     })
-    .then((response)=> response.json())  ; 
-
-
+    .then((response)=> response.json()) 
+    .then((response)=>{
+        // calling the function the display user 
+        dispaypalyer1(response) 
+        // in the return creating the new request of the 
+        return fetch("https://pokeapi.co/api/v2/pokemon/")
+    })
+    .then((response)=>response.json())
+    .then((response)=>{
+        let x = Math.floor(((Math.random())*20)) ; 
+        // now calling the next url 
+        return fetch(response.results[x].url) ; 
+    })
+    .then((response)=> response.json()) 
+    .then((response)=>{
+        // calling the function the display user 
+        return fetch("https://pokeapi.co/api/v2/pokemon/")
+    })
 
 }
