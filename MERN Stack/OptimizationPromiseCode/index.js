@@ -26,7 +26,8 @@ const searchInput = document.createElement('input') ;
  button.addEventListener('click',()=>{
     console.log(searchInput.value) ; 
     const id = searchInput.value ; 
-    fetchData(id) ; 
+  
+    fetchDataUser(id) ; 
     searchInput.value = '' ; 
 
  })
@@ -71,10 +72,15 @@ async function fetchDataUser(id){
  try{
     const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
      // in the async and await can directly use  the convert the jason 
-     // creating the condition 
-     const userJson = response.json() ; 
- }catch(err){
+     // creating the condition
+     if (!response.ok) {
+        throw new Error("now server is the down and not work ") ; 
+     } 
+     const userJson = await response.json() ; 
+  userDisplay(userJson) ; 
 
+ }catch(err){
+         console.log(err) ; 
  }
 
 }
