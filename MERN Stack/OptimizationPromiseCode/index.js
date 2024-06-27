@@ -27,6 +27,7 @@ const searchInput = document.createElement('input') ;
     console.log(searchInput.value) ; 
     const id = searchInput.value ; 
     fetchData(id) ; 
+    searchInput.value = '' ; 
 
  })
 
@@ -49,6 +50,10 @@ async function  fetchData(id){
  // id taking form the user 
  //and the finding the data of the user 
  // creating the fetch and you also using the async wait 
+
+ // applying the try catch for the getting any error and the get 
+ // and the error are the resolved 
+
   await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
  .then((response)=> response.json())
  .then((response)=>{
@@ -59,10 +64,26 @@ async function  fetchData(id){
 
 }
 
+
+// creating the different approach  to solved the problem 
+async function fetchDataUser(id){
+
+ try{
+    const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+     // in the async and await can directly use  the convert the jason 
+     // creating the condition 
+     const userJson = response.json() ; 
+ }catch(err){
+
+ }
+
+}
+
 function userDisplay(response){
 
      const userDataDisplay = document.getElementById('userDataDisplay') ; 
     // creating the div 
+    userDataDisplay.innerHTML = " " ; 
     const userDiv = document.createElement('div') ; 
     // creating the id 
     userDiv.id = 'userDiv' ; 
