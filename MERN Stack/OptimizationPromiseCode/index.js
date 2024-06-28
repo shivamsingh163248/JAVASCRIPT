@@ -104,16 +104,19 @@ function userDisplay(response){
 
 
     // all the element in the 
-    name.textContent = response.name ; 
-    username.textContent = response.username ;
-    email.textContent = response.email ; 
+    name.textContent = `Name : ${response.name}` ; 
+    username.textContent =`UserName : - ${response.username}` ;
+    email.textContent = `EmailAddress : - ${response.email}` ; 
+    address.textContent = `Address : - ${response.address.street} ${response.address.suite} ${response.address.city} ${response.address.zipcode}` ;
 
     // now append all the 
     userDiv.appendChild(name) ; 
     userDiv.appendChild(email) ; 
     userDiv.appendChild(username) ; 
+    userDiv.appendChild(address) ; 
  
     userDataDisplay.appendChild(userDiv) ; 
+    // this is learning the 
 
 
 
