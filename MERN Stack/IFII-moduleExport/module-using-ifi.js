@@ -58,7 +58,11 @@ function DisplayElement(){
         console.log(cart[key].id) ; 
     }
    
-
+    // creating the element for the total prise '
+ const total = document.createElement('h1') ; 
+ total.textContent =`Total Product : .....................${getTotal()}`  ; 
+ container.appendChild(total) ; 
+ 
 
 
     ElementMain.appendChild(container) ; 
