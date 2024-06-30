@@ -5,10 +5,10 @@ let Total = 0 ;
 
 // now creating the function for the return the total calculation 
 
-function totalPrice(cart){
+function totalPrice(){
 
     // apply the reduce function for the getting the value 
- Total =  cart.reduce((total , current)=>  total+current , 0);
+ Total =  cart.reduce((total , curr)=>  total + curr.price , 0);
 
 }
 
@@ -17,7 +17,8 @@ function totalPrice(cart){
 function addItem(item){
   cart.push(item) ;
   // then calculated the total prise 
-  totalPrice() ;  
+  totalPrice() ; 
+ //  DisplayElement() ;  
 
 }
 
@@ -33,7 +34,13 @@ function getCart(){
 }
 
 
-const div = document.getElementById('container') ; 
+// now calling the additem 
+addItem({id : 343 , product : "item "  , price : 54  }) ; 
+addItem({id : 343 , product : "item "  , price : 4  }) ;
+addItem({id : 343 , product : "item "  , price : 64  }) ;
+
+
+const ElementMain = document.getElementById('container') ; 
 
 // creating the loop of 
 // creating the function display Element 
@@ -47,7 +54,13 @@ function DisplayElement(){
        // creating the element and append and the container 
        const element =  document.createElement('h2') ; 
        element.innerHTML = `  id : ${cart[key].id} productName :  ${cart[key].product}   Price : ${cart[key].price} `  ; 
-
-        
+       container.appendChild(element) ; 
+        console.log(cart[key].id) ; 
     }
+   
+
+
+
+    ElementMain.appendChild(container) ; 
 }
+DisplayElement() ; 
