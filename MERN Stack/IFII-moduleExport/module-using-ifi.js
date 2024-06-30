@@ -31,3 +31,20 @@ function getTotal(){
 function getCart(){
     return cart ; 
 }
+
+
+const div = document.getElementById('container') ; 
+
+// creating the loop of 
+// creating the function display Element 
+function DisplayElement(){
+    // creating the element 
+    const container = document.createElement('div') ; 
+
+    // creating the loop of the element and creating all the element list 
+    for (const key in cart) {
+       
+       // creating the element and append and the container 
+        
+    }
+}
