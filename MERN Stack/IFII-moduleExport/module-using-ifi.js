@@ -45,6 +45,9 @@ function DisplayElement(){
     for (const key in cart) {
        
        // creating the element and append and the container 
+       const element =  document.createElement('h2') ; 
+       element.innerHTML = `  id : ${cart[key].id} productName :  ${cart[key].product}   Price : ${cart[key].price} `  ; 
+
         
     }
 }
