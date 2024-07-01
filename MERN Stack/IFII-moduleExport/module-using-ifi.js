@@ -1,9 +1,15 @@
 // now creating the function 
-let cart = [] ; 
-let Total = 0 ; 
+
 
 
 // now creating the function for the return the total calculation 
+
+
+
+const shipingCart = ( function(){
+    let cart = [] ; 
+    let Total = 0 ; 
+  
 
 function totalPrice(){
 
@@ -14,24 +20,27 @@ function totalPrice(){
 
 // creating the function of the adding the element 
 // creating the three function 
-function addItem(item){
+ return {
+     addItem : function(item){
   cart.push(item) ;
   // then calculated the total prise 
   totalPrice() ; 
  //  DisplayElement() ;  
 
-}
+},
 
 // creating the function to get total 
-function getTotal(){
+ getTotal : function(){
     // creating the function 
     return Total ; 
-}
+},
 
 // creating the function to return the arrays 
-function getCart(){
+getCart : function(){
     return cart ; 
 }
+ };
+})() ; 
 
 
 // now calling the additem 
