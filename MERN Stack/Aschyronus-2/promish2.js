@@ -2,7 +2,9 @@
 const result = new Promise((accept , reject)=>{
     // this is the arrow function 
   // creating the set time out function 
-  setTimeout(accept("this is the my name ") , 2000) ; 
+  setTimeout(()=>{
+    accept('this is the resolved')
+  },5000) ; 
 
 
 }) ; 
