@@ -19,3 +19,8 @@ city = "mirzapur"
 
 console.log(accountNumber) ; 
 console.log(accountId)
+
+console.table([accountId ,accountName ,accountNumber])
+console.log(city) ; 
+console.log('1'+1);
+console.log(typeof(accountId))
