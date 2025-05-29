@@ -86,3 +86,5 @@ console.log(typeof(someNumber)) ;  // so actually convert
 // check the convert in in the object , arrays ........ with tha all the possible case 
 
 
+
+
