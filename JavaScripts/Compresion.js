@@ -15,3 +15,9 @@ console.log(undefined <= 0) ;
 console.log(undefined >= 0) ; 
 console.log(undefined == 0) ; 
 
+ 
+// now learning the symbol  
+let sy = Symbol("454") ; 
+let sy2 = Symbol("56") ; 
+console.log(sy) ; 
+console.log(sy2)
