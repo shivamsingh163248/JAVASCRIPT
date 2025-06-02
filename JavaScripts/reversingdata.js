@@ -13,3 +13,28 @@ console.log(reversingData(new Date("2023-06-04")) )
 
 
 
+// now solved the second question 
+// calculate age 
+function calculateAge(dobString) {
+    let dob = new Date(dobString);
+    let today = new Date();
+
+    let age = today.getFullYear() - dob.getFullYear();
+
+    let monthDiff = today.getMonth() - dob.getMonth();
+    let dayDiff = today.getDate() - dob.getDate();
+    console.log(dob.getDate())
+
+    // If birthday hasn't occurred yet this year, subtract 1
+    if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+        age--;
+    }
+
+    return age;
+}
+
+console.log(calculateAge("2023-06-02"));  // Output depends on today's date
+
+
+
+
