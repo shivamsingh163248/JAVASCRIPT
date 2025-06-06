@@ -36,5 +36,15 @@ function calculateAge(dobString) {
 console.log(calculateAge("2023-06-02"));  // Output depends on today's date
 
 
+// if creating the function to creating the function \
+function sum(a,b){
+
+    let sum = a+b ; 
+    return function (mul){
+        return sum*mul ; 
+    }
+
+}
+
 
 
