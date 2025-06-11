@@ -46,5 +46,11 @@ function sum(a,b){
 
 }
 
+let another = sum(3,6) ; 
+console.log(another(6))
+
+
+
+
 
 
